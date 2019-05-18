@@ -1,0 +1,191 @@
+
+.ui-widget, .ui-widget input {
+    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.panel {
+    display: none;
+} 
+
+.color1 {
+  background-color: #f9f9f9;
+}
+
+#profileChart {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.oppProfile {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+  position:absolute;
+  bottom:0px;
+  width: 100%;
+  padding:5px;
+}
+
+.vote {
+    padding:0px;
+    border:0.5px solid #ffffff;
+}
+
+.oppHover:hover{
+    border:1px solid #d3401e;
+}
+
+.row {
+    margin:0px;
+}
+
+#vsVote {
+  text-align: center;
+  font-size: 25px;
+}
+
+#result01 {
+  font-weight: bold;
+}
+
+.profileSeat, .profileVoter {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*SCROLLSTORY CSS*/ 
+.scroller-wrapper {
+  position:relative;
+}
+
+.chart-wrapper {
+  /*display:none;*/
+  position: fixed;
+  bottom:20px;
+  left:50%;
+  margin-left: -240px;
+  z-index: 0;
+}
+
+.text-wrapper {
+  font-size:20px!important;
+  position:relative;
+  width:100%;
+  text-align: center;
+  padding-bottom: 1px;
+  z-index: 1;
+}
+
+.trigger {
+  opacity:0.1;
+  width:80%;
+  padding:5px 10px;
+  margin:0 auto;
+  margin-bottom: 500px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align:left;
+}
+
+#errorBox {
+  color:#939393;
+  text-align: center;
+  display:none;
+}
+
+.chart-wrapper.is-bottom {
+  position:absolute;
+  top: auto;
+  bottom:50px;
+  z-index: 2;
+}
+
+#instruct {
+  width: 50%;
+  z-index: 5;
+  display: none;
+  position: absolute;
+  top:12%;
+  right:1%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.background {
+  display: inline-block;
+  padding:0px 5px;
+  background: #212121;
+  /* Old browsers */
+  background: linear-gradient(to left, transparent 50%, #212121 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 2s ease;
+}
+
+.backgroundBN {
+  display: inline-block;
+  padding:0px 5px;
+  background: #304FFE;
+  /* Old browsers */
+  background: linear-gradient(to left, transparent 50%, #304FFE 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 2s ease;
+}
+
+.backgroundOPP {
+  display: inline-block;
+  padding:0px 5px;
+  background: #ff1744;
+  /* Old browsers */
+  background: linear-gradient(to left, transparent 50%, #ff1744 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 2s ease;
+}
+
+.changeBackground {
+  color:white;
+  background-position:left bottom;
+}
+
+.font {
+  color: #666;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #000, #000 50%, #666 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.fontBN {
+  color: #666;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #304FFE, #304FFE 50%, #666 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.fontOPP {
+  color: #666;
+  text-decoration: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ff1744, #ff1744 50%, #666 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+.changeFont {
+  transition: all 2s ease;
+  background-position: 0%;
+}
