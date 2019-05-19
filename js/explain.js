@@ -94,8 +94,8 @@ console.log("dataCat2Data = " + dataCat2Data);
 // makebubbleCat ();
 // makechartSize1 ();
 // makechartCat ();
-// makemapShort ();
-makeitemCat ();
+makemapShort ();
+// makeitemCat ();
 
 
 for (i = 0; i < dataAll.length; i++) { 
