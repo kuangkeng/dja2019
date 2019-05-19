@@ -24,11 +24,11 @@ $('.mobileAvatar').css({'max-height':viewportHeight});
 var chartDate;
 var mapEntries;
 var bubbleRegion;
+var bubbleCat;
 var chartSize1;
-var chartSize2;
 var chartCat;
 var mapShort;
-var bubbleCat;
+var itemCat;
 
 //count and step are used to check if any chart animation step has been skipped
 var count = 0,
@@ -61,6 +61,8 @@ var dataDate = [],
     dataDate2 = [],
     dataSub = [],
     dataSub2 = [],
+    dataCat2Name = [],
+    dataCat2Data = [],
     dataBN = [],
     dataBN2 = [],
     dataOPP = [],
@@ -75,14 +77,25 @@ for (i = 0; i < dataDateAll.length; i++) {
     dataSub.push(dataDateAll[i].submissions);
 }
 
+for (i = 0; i < dataCat1All.length; i++) { 
+    dataCat2Name.push(dataCat1All[i].name);
+    dataCat2Data.push(dataCat1All[i].value);
+}
+
 dataDate2 = JSON.parse(JSON.stringify(dataDate));
 dataSub2 = JSON.parse(JSON.stringify(dataSub));
 
-console.log("dataDate2 = " + dataDate2);
-console.log("dataSub2 = " + dataSub2);
+console.log("dataCat2Name = " + dataCat2Name);
+console.log("dataCat2Data = " + dataCat2Data);
 
 // makechartDate();
-makemapEntries();
+// makemapEntries();
+// makebubbleRegion();
+// makebubbleCat ();
+// makechartSize1 ();
+// makechartCat ();
+// makemapShort ();
+makeitemCat ();
 
 
 for (i = 0; i < dataAll.length; i++) { 
@@ -841,7 +854,6 @@ dataUrban2 = JSON.parse(JSON.stringify(dataUrban));
 
     //SCROLLSTORY: functions to make the animated chart
     function makechartDate () {
-
         Highcharts.setOptions({
             lang: {
               thousandsSep: ','
@@ -948,18 +960,382 @@ dataUrban2 = JSON.parse(JSON.stringify(dataUrban));
             }, {
                 type: 'mapbubble',
                 name: 'Submissions',
-                joinBy: ['iso-a3', 'code3'],
+                joinBy: ['iso-a2', 'code'],
                 data: dataCountryAll,
-                minSize: 4,
-                maxSize: '12%',
+                minSize: 6,
+                maxSize: '15%',
+                color: '#40c0f0',
                 tooltip: {
-                    pointFormat: '{point.properties.hc-a2}: {point.z} thousands'
+                    pointFormat: '{point.name}: {point.z}'
                 }
-            }]     
+            },{
+                type: 'mapbubble',
+                data: [{
+                  name: 'Hong Kong',
+                  lat: 22.3964,
+                  lon: 114.1095,
+                  z: 24,
+                }],
+                minSize: 6,
+                maxSize: '15%',
+                color: '#40c0f0',
+              }]     
         });
       });
     }
 
+    function makebubbleRegion () {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        bubbleRegion = new Highcharts.Chart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                type: 'packedbubble',
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: '<b>{point.name}:</b> {point.value}'
+            },
+            plotOptions: {
+                packedbubble: {
+                    minSize: '10%',
+                    maxSize: '150%',
+                    layoutAlgorithm: {
+                        gravitationalConstant: 0.05,
+                        splitSeries: true,
+                        seriesInteraction: false,
+                        dragBetweenSeries: true,
+                        parentNodeLimit: true
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.name}',
+                        filter: {
+                            property: 'y',
+                            operator: '>',
+                            value: 10
+                        },
+                        style: {
+                            color: 'black',
+                            textOutline: 'none',
+                            fontWeight: 'normal'
+                        }
+                    }
+                }
+            },
+            series: dataRegionAll,           
+        });
+    };
+
+    function makebubbleCat () {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        bubbleCat = new Highcharts.Chart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                type: 'packedbubble',
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: '<b>{point.organisation}, {point.country}</b><br>{point.title}<br>Newsroom size: {point.size}'
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                series: {
+                  marker: {
+                    fillOpacity:1,
+                  },
+                },
+                packedbubble: {
+                    minSize: '10%',
+                    maxSize: '50%',
+                    layoutAlgorithm: {
+                        bubblePadding: 5,
+                        enableSimulation: true,
+                        gravitationalConstant: 0.1,
+                        splitSeries: true,
+                        seriesInteraction: false,
+                        parentNodeLimit: true,
+                        parentNodeOptions:{
+                          bubblePadding: 30,
+                          gravitationalConstant: 0.05,
+                          friction: -0.5,
+                        },
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function() {return "";},
+                        parentNodeFormat: '{point.series.name}',
+                    },
+                }
+            },
+            series: shortCatAll,           
+        });
+    };
+
+    function makechartSize1 () {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        chartSize1 = new Highcharts.Chart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                type: 'pie'
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: 'Percentage: <b>{point.y}%</b><br>No. of submissions: <b>{point.submissions}</b>'
+            },
+            legend: {
+                enabled: false
+            },
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.title}<br><b>{point.y}%</b>',
+                        distance: -50,
+                        style: {
+                            fontSize: '18px',
+                        }
+                    },
+                    startAngle: -90,
+                    endAngle: 90,
+                    center: ['50%', '75%'],
+                    size: '110%'
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                innerSize: '50%',
+                data: dataSize1All,
+            }]
+        });
+    };
+
+    function makechartCat () {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        chartCat = new Highcharts.Chart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                type: 'bar'
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: 'No. of submissions: <b>{point.y}</b>'
+            },
+            legend: {
+                enabled: false
+            },
+            xAxis: {
+                categories: dataCat2Name,   
+            },
+            yAxis: {
+                title: {
+                  text: 'No. of submissions',
+                  style: {
+                    color: '#808080',
+                    fontSize: '11px',
+                  },  
+                  x:-40,
+                },
+                endOnTick: false,
+
+                //MODIFY: set the minimum interval between unit of yAxis. Remove this line for Highcharts to decide based on width.    
+                minTickInterval:10,
+            },            
+            plotOptions: {
+                series:{
+                    //MODIFY: adjust the space between bars
+                    groupPadding: 0.05,
+                    pointPadding: 0,
+                    stickyTracking: false,
+
+                    //MODIFY: Show/hide label on the data points. Default is hide.
+                    dataLabels: {
+                        enabled: true,
+                        style: {
+                            fontSize: '11px',
+                        },
+                        //MODIFY: Customize the data label. "point.y" is the data value. ",.1f" sets "," as thousand separator and sets the decimal point at zero. Refer to the syntax at Highcharts API under the topic "FORMAT STRINGS" (http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting). Remove this line for Highcharts to auto-populate the label.
+                        format: '{point.y}',
+                    }
+                },
+            }, 
+            series: [ 
+                {
+                  name:"Categories", 
+                  color:"#40c0f0", 
+                  data: dataCat2Data,
+                },
+            ],
+        });
+    };
+
+    function makemapShort () {
+      $.getJSON('js/countries-short.json', function (dataCountryShort) {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        mapShort = new Highcharts.mapChart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                map: 'custom/world'
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            legend: {
+                enabled: false
+            },
+            mapNavigation: {
+                enabled: false,
+                buttonOptions: {
+                    verticalAlign: 'bottom'
+                }
+            },
+            series: [{
+                name: 'CountriesShort',
+                color: '#E0E0E0',
+                enableMouseTracking: false
+            }, {
+                type: 'mapbubble',
+                name: 'Shortlist',
+                joinBy: ['iso-a2', 'code'],
+                data: dataCountryShort,
+                minSize: 6,
+                maxSize: '15%',
+                color: '#40c0f0',
+                tooltip: {
+                    pointFormat: '{point.name}: {point.z}'
+                }
+            },{
+                type: 'mapbubble',
+                data: [{
+                  name: 'Hong Kong',
+                  lat: 22.3964,
+                  lon: 114.1095,
+                  z: 2,
+                }],
+                minSize: 6,
+                maxSize: '15%',
+                color: '#40c0f0',
+              }]     
+        });
+      });
+    }    
+
+    function makeitemCat () {
+        Highcharts.setOptions({
+            lang: {
+              thousandsSep: ','
+            }
+        }),
+
+        itemCat = new Highcharts.Chart({
+            chart: {
+                height: chartHeight,
+                renderTo: 'chart-container',
+                type: 'item',
+                marginRight: 0,
+                marginLeft: 0,
+            },
+            title: {
+                text: null,
+            },
+            subtitle: {
+                enabled: false,
+            },
+            tooltip: {
+                useHTML: true,
+                pointFormat: 'No. of submissions: <b>{point.y}</b>'
+            },
+            legend: {
+                enabled: false
+            },
+            credits: {enabled: false},
+            series: [ 
+                {
+                  name:"Regions", 
+                  data: dataRegion2All,
+                  dataLabels: {
+                      enabled: true,
+                      formatter: function() {
+                        if (this.point.name == "South America") {
+                          return "South<br>America";
+                        } else if (this.point.name == "North America") {
+                          return "North<br>America";
+                        }
+                        else {
+                          return this.point.name;
+                        }
+                      },
+                      style: {
+                        fontSize: '14px',
+                      },
+                  },
+                  center: ['47%', '50%'],
+                  size: '100%',
+                  startAngle: -100,
+                  endAngle: 100
+                },
+            ],
+        });
+    };
 
 function addThousandSeparator(nStr) {
     nStr += '';

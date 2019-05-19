@@ -679,3 +679,291 @@ var dataDateAll = [
     {"Day":"Apr-6","submissions":376},
     {"Day":"Apr-7","submissions":607}
 ];
+
+var dataRegionAll = [{
+        "name": "Africa",
+        "color":"#5f4690",
+        "data": [
+            {"name":"Burkina Faso","value":1},
+            {"name":"Burundi","value":1},
+            {"name":"Egypt","value":11},
+            {"name":"Kenya","value":2},
+            {"name":"Nigeria","value":7},
+            {"name":"Senegal","value":1},
+            {"name":"South Africa","value":5},
+            {"name":"Tunisia","value":3},
+        ]
+},{
+        "name": "Asia",
+        "color":"#40c0f0",
+        "data": [
+            {"name":"Bangladesh","value":1},
+            {"name":"Cambodia","value":1},
+            {"name":"China","value":45},
+            {"name":"Hong Kong","value":24},
+            {"name":"India","value":14},
+            {"name":"Indonesia","value":8},
+            {"name":"Iraq","value":2},
+            {"name":"Israel","value":1},
+            {"name":"Japan","value":6},
+            {"name":"Jordan","value":2},
+            {"name":"Kyrgyz Republic","value":1},
+            {"name":"Lebanon","value":1},
+            {"name":"Malaysia","value":4},
+            {"name":"Mongolia","value":2},
+            {"name":"Pakistan","value":12},
+            {"name":"Philippines","value":17},
+            {"name":"Qatar","value":2},
+            {"name":"Russian Federation","value":14},
+            {"name":"Singapore","value":4},
+            {"name":"Taiwan","value":18},
+            {"name":"Thailand","value":2},
+        ]
+},{
+        "name": "Europe",
+        "color":"#edad08",
+        "data": [
+            {"name":"Austria","value":2},
+            {"name":"Belgium","value":1},
+            {"name":"Bosnia and Herzegovina","value":1},
+            {"name":"Czech Republic","value":2},
+            {"name":"Denmark","value":2},
+            {"name":"Finland","value":6},
+            {"name":"France","value":4},
+            {"name":"Germany","value":20},
+            {"name":"Hungary","value":2},
+            {"name":"Italy","value":2},
+            {"name":"Netherlands","value":11},
+            {"name":"Norway","value":3},
+            {"name":"Poland","value":1},
+            {"name":"Portugal","value":3},
+            {"name":"Serbia","value":1},
+            {"name":"Spain","value":14},
+            {"name":"Sweden","value":6},
+            {"name":"Switzerland","value":6},
+            {"name":"Ukraine","value":3},
+            {"name":"United Kingdom","value":57},
+        ]
+},{
+        "name": "North American",
+        "color":"#fe4700",
+        "data": [
+            {"name":"Canada","value":6},
+            {"name":"Puerto Rico","value":1},
+            {"name":"United States","value":139},
+        ]
+},{
+        "name": "Oceania",
+        "color":"#666666",
+        "data": [
+            {"name":"Australia","value":7},
+            {"name":"New Zealand","value":1},
+        ]
+},{
+        "name": "South America",
+        "color":"#73af48",
+        "data": [
+            {"name":"Argentina","value":13},
+            {"name":"Brazil","value":47},
+            {"name":"Colombia","value":11},
+            {"name":"Costa Rica","value":1},
+            {"name":"Cuba","value":12},
+            {"name":"El Salvador","value":4},
+            {"name":"Mexico","value":5},
+            {"name":"Uruguay","value":1}            
+        ]
+}];
+
+var shortCatAll = [{
+        "name": "Award for innovation in data journalism",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Copy, paste, legislate: We looked for legislation that was written by special interests. We found it in all 50 states.","organisation":"USA Today","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Economist's 'Build a voter' models","organisation":"The Economist","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Concrete and coral: Tracking expansion in the South China Sea","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Facial recognition's 'dirty little secret': Millions of online photos scraped without consent","organisation":"NBC News","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"RADAR - data journalism and automation to produce local news at scale","organisation":"RADAR","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Radmesser","organisation":"Der Tagesspiegel","country":"Germany"},
+            {"value":10,"size":"Large","color":"#edad08","title":"A whole presidential campaign categorized","organisation":"Folha de S.Paulo","country":"Brazil"},
+            {"value":10,"size":"Large","color":"#edad08","title":"This is what an analysis of the presidential candidates' facial expressions reveals","organisation":"O Estado de S. Paulo","country":"Brazil"},
+        ]
+},{
+        "name": "Award for student and young data journalist of the year",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Portfolio: Kira Schacht","organisation":"Deutsche Welle / Journocode","country":"Germany"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Deputy editor for Rutas del Conflicto","organisation":"Rutas del Conflicto","country":"Colombia"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Portfolio: James Tozer","organisation":"The Economist","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Jill Castellano: Following the Money in San Diego Elections","organisation":"inewsource","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Dada Lyndell Young Data Journalist of the Year portfolio entry","organisation":"RBC.ru","country":"Russian Federation"},
+            {"value":10,"size":"Large","color":"#edad08","title":"George Greenwood Young Data Journalist of the Year portfolio entry","organisation":"BBC London)","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Saimi Reyes - Young Data Journalist","organisation":"Postdata.club","country":"Cuba"},
+        ]
+},{
+        "name": "Best data journalism team portfolio: (Large newsroom)",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Data journalism team","organisation":"The Times & The Sunday Times","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"ProPublica News Applications Team","organisation":"ProPublica","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Reuters Graphics team","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Economist Data Team's Graphic Detail Portfolio","organisation":"The Economist","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"La Nacion Data's team portfolio from Buenos Aires, Argentina 2019","organisation":"La Nación","country":"Argentina"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The South China Morning Post Arcade","organisation":"South China Morning Post","country":"Hong Kong"},
+            {"value":10,"size":"Large","color":"#edad08","title":"DW Data","organisation":"Deutsche Welle","country":"Germany"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Bloomberg Graphics Portfolio","organisation":"Bloomberg Graphics","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"SPIEGEL Data","organisation":"Der Spiegel","country":"Germany"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Telegraph Data Journalism Team","organisation":"The Telegraph","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Data Projects Team","organisation":"The Guardian","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Wall Street Journal data and graphics","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Rappler team portfolio: Series of data stories on social media, disinformation, and democracy","organisation":"Rappler","country":"Philippines"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Caixin Vislab","organisation":"Caixin Media","country":"China"},        
+        ]
+},{
+        "name": "Best data journalism team portfolio: (Small newsroom)",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Small","color":"#fe4700","title":"The Pudding (team portfolio)","organisation":"The Pudding","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Texas Tribune Data Visuals Team Personalized News Portfolio","organisation":"The Texas Tribune","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Center for Public Integrity Data Portfolio","organisation":"Center for Public Integrity","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Bureau Local Team","organisation":"The Bureau of Investigative Journalism","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"FiveThirtyEight Portfolio","organisation":"FiveThirtyEight","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"J++ (Journalism++)","organisation":"J++ (Journalism++)","country":"Sweden"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Marshall Project data portfolio","organisation":"The Marshall Project","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Air quality in Mongolia","organisation":"Mongolian Center for Investigative Reporting","country":"Mongolia"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Postdata.club - Best team portfolio (small newsroom)","organisation":"Postdata.club","country":"Cuba"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"South Africa's Deadly School Toilets","organisation":"Media Hack Collective","country":"South Africa"},        
+        ]
+},{
+        "name": "Best individual portfolio",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Shane Shifflett's portfolio","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Al Shaw Individual Portfolio","organisation":"ProPublica","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Counting the cost of the education revolution (and other data-driven investigations)","organisation":"ABC News","country":"Australia"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Eva Belmonte's individual portfolio","organisation":"Civio","country":"Spain"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Roberto Rocha's personal portfolio","organisation":"CBC","country":"Canada"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Individual Portfolio - Claire Miller","organisation":"Reach Data Unit","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Ashley Kirk","organisation":"The Telegraph","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Portfolio: Emily M. Eng","organisation":"The Seattle Times","country":"United States"},        
+        ]
+},{
+        "name": "Best use of data in a breaking news story, within first 36 hours",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Indonesia plane crash","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Every time Ford and Kavanaugh dodged a question, in one chart","organisation":"Vox.com","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"A test of 12520 heated words: Does Baijiahao really occupy Baidu's search results?","organisation":"JieFang Daily","country":"China"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"State Capture and the R12-billion Bosasa was given","organisation":"Mail & Guardian","country":"South Africa"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Graphic explainer: the deadly 43-minutes chat record of Puyuma Express derailment","organisation":"READr","country":"Taiwan"},
+            {"value":10,"size":"Large","color":"#edad08","title":"California is burning","organisation":"USA Today","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"How the Thai cave rescue mission unfolded","organisation":"South China Morning Post","country":"Hong Kong"},                    
+        ]
+},{
+        "name": "Data journalism website of the year",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"graphics.reuters.com","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"The Pudding","organisation":"The Pudding","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Wall Street Journal data and graphics","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Hate Crime Watch","organisation":"FactChecker.in","country":"India"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Postdata.club - Data Journalism Website of the year","organisation":"Postdata.club","country":"Cuba"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Storybench","organisation":"Northeastern University School of Journalism","country":"United States"},
+        ]
+},{
+        "name": "Data visualisation of the year",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"To See How Levees Increase Flooding, We Built Our Own","organisation":"ProPublica","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Here's How America Uses Its Land","organisation":"Bloomberg Graphics","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Trapped in Paradise","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"A year after the disappearance of the submarine ARA San Juan","organisation":"La Nación","country":"Argentina"},
+            {"value":10,"size":"Large","color":"#edad08","title":"How the monsoon could devastate Rohingya camps","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Yemen: Death from Above - Every Saudi coalition air raid on Yemen since 2015.","organisation":"Al Jazeera","country":"Qatar"},
+            {"value":10,"size":"Large","color":"#edad08","title":"How Brexit revealed four new political factions","organisation":"The Guardian","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The race to save the river Ganges","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"How Trump's Trade War Went From 18 Products to 10,000","organisation":"The New York Times","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"We can draw school zones to make classrooms less segregated. This is how well your district does.","organisation":"Vox.com","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"How life has changed for people your age","organisation":"ABC News (Australia)","country":"Australia"},
+        ]
+},{
+        "name": "Investigation of the year",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"Hurricane Maria's Dead","organisation":"AP","country":"Puerto Rico"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Ocean Shock","organisation":"Reuters","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Dying Homeless","organisation":"The Bureau of Investigative Journalism","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Miseducation","organisation":"ProPublica and The New York Times","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Driver's notebooks exposed Argentina's greatest corruption scandal ever: ten years and millions of cash bribes in bags","organisation":"La Nación","country":"Argentina"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Implant Files","organisation":"AVROTROS and more than 50 media partners","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Black box Schufa","organisation":"Bayerischer Rundfunk","country":"Germany"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Receipts of Power","organisation":"Aftonbladet","country":"Sweden"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Recommended for you by YouTube: racism, antisemitism and misogyny – How YouTube fuels right-wing radicalization","organisation":"de Correspondent and de Volkskrant news media","country":"Netherlands"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"As Tons of Chicago Recycling Go to Dumps, a Private Firm Is Paid Twice","organisation":"Better Government Association","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"The Force Report","organisation":"NJ Advance Media","country":"United States"},
+        ]
+},{
+        "name": "News Data App",
+        "color":"#40c0f0",
+        "data": [  
+            {"value":10,"size":"Small","color":"#fe4700","title":"Observatorio de Corrupción","organisation":"Conocimiento Abierto y Asociación Civil por la Justicia","country":"Argentina"},
+            {"value":10,"size":"Large","color":"#edad08","title":"St. Louis Crime Tracker","organisation":"St. Louis Post-Dispatch","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Broadband speed map reveals Britain's new digital divide","organisation":"Financial Times","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Follow the NRA's Spending on the 2018 Midterms, Down to the Last Dollar","organisation":"The Trace","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Bloomberg Businessweek Best B-Schools","organisation":"Bloomberg Businessweek","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Can You Afford to Retire","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"The Myth of the Criminal Immigrant","organisation":"The Marshall Project","country":"United States"},
+        ]
+},{
+        "name": "Open Data Award",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Small","color":"#fe4700","title":"The post-conflict numbers","organisation":"Consejo de Redacción - www.consejoderedaccion.org / Colombiacheck.com","country":"Colombia"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Sold From Under You","organisation":"The Bureau of Investigative Journalism and HuffPost UK","country":"United Kingdom"},
+            {"value":10,"size":"Large","color":"#edad08","title":"OCCRP Data","organisation":"Organized Crime and Corruption Reporting Project","country":"Bosnia and Herzegovina"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Database on proceedings against public officials","organisation":"Center for Investigative Journalism of Serbia","country":"Serbia"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Foreign Lobby Watch","organisation":"Center for Responsive Politics","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"FiveThirtyEight's Open Data intiatives","organisation":"FiveThirtyEight","country":"United States"},
+        ]
+},{
+        "name": "Public Choice Award",
+        "color":"#40c0f0",
+        "data": [
+            {"value":10,"size":"Large","color":"#edad08","title":"South Sudan Food Prices","organisation":"The Washington Post","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"The 'Clean' Political Discourse van","organisation":"Darkenu","country":"Israel"},
+            {"value":10,"size":"Large","color":"#edad08","title":"This is how thin you have to be, to walk the catwalk","organisation":"NOS","country":"Netherlands"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Spitz dogs or Staffordshire Terriers? How and why fashion for dog breeds has changed in Russia since 2000","organisation":"BBC News Russian","country":"Russian Federation"},
+            {"value":10,"size":"Large","color":"#edad08","title":"See How Your Salary Compares","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"In certain places in Russia HIV takes more lives than car accidents, suicides and alcohol: research","organisation":"RBC.ru","country":"Russian Federation"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Homicide, the main cause of death of the bodies that were repatriated to El Salvador","organisation":"El Diario de Hoy","country":"El Salvador"},
+            {"value":10,"size":"Large","color":"#edad08","title":"A day in a Spain without women","organisation":"El Confidencial","country":"Spain"}
+        ]
+}];
+
+var dataSize1All = [
+    {"name":"Large organisations","title":"Large","submissions":393,"y":65,"color":"#edad08"},
+    {"name":"Small organisations","title":"Small","submissions":214,"y":35,"color":"#fe4700"},
+];
+
+var dataCat1All = [
+    {"name":"Data visualisation of the year","value":127},
+    {"name":"Award for innovation in data journalism","value":101},
+    {"name":"Investigation of the year","value":95},
+    {"name":"Best individual portfolio","value":46},
+    {"name":"Award for student and young data journalist of the year","value":42},
+    {"name":"Open Data Award","value":42},
+    {"name":"Best data journalism team portfolio: (Large newsroom)","value":34},
+    {"name":"Best data journalism team portfolio: (Small newsroom)","value":34},
+    {"name":"News Data App","value":31},
+    {"name":"Data journalism website of the year","value":25},
+    {"name":"Best use of data in a breaking news story, within first 36 hours","value":20},
+    {"name":"Public Choice Award","value":10}
+];
+
+var dataRegion2All = [
+    {"name":"North America","y":46,"color":"#fe4700"},
+    {"name":"Europe","y":28,"color":"#edad08"},
+    {"name":"Asia","y":13,"color":"#40c0f0"},
+    {"name":"South America","y":12,"color":"#73af48"},
+    {"name":"Africa","y":2,"color":"#5f4690"},
+    {"name":"Oceania","y":2,"color":"#666666"}
+];
