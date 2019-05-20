@@ -7,12 +7,10 @@ var $scrollerWrapper = $('.scroller-wrapper'),
 var viewportHeight = $(window).height(),
     halfViewportHeight = Math.floor(viewportHeight / 2),
     twoThirdViewportHeight = Math.floor(viewportHeight / 3 * 2),
-    chartWidth = $('.wrapper').width()-22,
+    chartWidth = $('.dataviz-wrapper').width()-22,
     chartMargin = 0 - (chartWidth/2), //use this to center align the chart when it's position is set as fixed
     chartHeight = Math.floor(viewportHeight*0.8),
     headlineHeight = $('.headline').outerHeight( true);
-
-    console.log("viewportHeight = " + viewportHeight)
 
 $chartWrapper.css({'width':chartWidth, 'margin-left':chartMargin, 'height':chartHeight});
 $('.trigger').css({'margin-top':viewportHeight});
@@ -55,6 +53,10 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
     function init() {      
       steps = steps_null;
       setTimeout(scrollstory,500);
+      setTimeout(function(){
+        $('.trigger').css("opacity","0.1");
+      },500);
+      $('.highlight').addClass("changeBackground");
     }
 
     //SCROLLSTORY: handle the fixed/static position of grahpic
@@ -118,21 +120,12 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
     //fade in and fade out the chart
       if (bb.top < viewportHeight/2 && bb.top != 0) {
         if (chartSwitch == 0) {
-            // makechart();
             chartSwitch = 1;
         } 
         $chartWrapper.fadeIn(1000);
       } else {
         $chartWrapper.fadeOut(300);
       }
-
-    //fix the position of chart when scroll to the last animation
-      // if (bb.top < halfViewportHeight && bottomFromTop > 0) {
-      //   bottom = false
-      // } else if (bb.top < 0 && bottomFromTop < 0) {
-      //   bottom = true
-      // }
-      // toggle(bottom)
     }
 
     //SCROLLSTORY: call the scrollStory plugin and set the features to be used. Refer to ScrollStory documentation: http://sjwilliams.github.io/scrollstory/
@@ -150,10 +143,8 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
 
 
     function callChart() {
-      console.log("count = " + count + ", step = " + step);        
       $('.chart-container').fadeOut(300);
       if ($('#chart-container-'+step).html() == ""){
-        console.log("empty!");
         setTimeout(function(){
           makeCharts[step-1].call();  
         }, 300);
@@ -162,7 +153,6 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
     }
 
     function reverseChart() {
-      console.log("reverse! count = " + count + ", step = " + step);
       $('.chart-container').fadeOut(300);
       $('#chart-container-'+ count).fadeIn(300);
     }

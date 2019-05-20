@@ -1,6 +1,6 @@
-.wrapper {
-    margin: 0 auto;
-    max-width: 680px;
+.dataviz-wrapper {
+  margin: 0 auto;
+  max-width: 680px;
 }
 
 #opening-text {
@@ -21,18 +21,12 @@
   z-index: 0;
 }
 
-.chart-wrapper.is-bottom {
-  position:absolute;
-  top: auto;
-  bottom:50px;
-  z-index: 2;
-}
-
 .chart-container {
   display:none;
   position:absolute;
   bottom:0;
   left:0;
+  width: 100%;
 }
 
 .text-wrapper {
@@ -47,7 +41,7 @@
 }
 
 .trigger {
-  opacity:0.1;
+  opacity:0;
   width:80%;
   padding:5px 10px;
   margin:0 auto;
@@ -56,20 +50,15 @@
   text-align:left;
 }
 
-#errorBox {
-  color:#939393;
-  text-align: center;
-  display:none;
-}
-
-#instruct {
-  width: 50%;
-  z-index: 5;
-  display: none;
-  position: absolute;
-  top:12%;
-  right:1%;
-  background-color: rgba(255, 255, 255, 0.9);
+.highlight {
+  display: inline-block;
+  padding:0px 5px;
+  background: #40c0f0;
+  /* Old browsers */
+  background: linear-gradient(to left, transparent 50%, #40c0f0 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 2s ease;
 }
 
 .background {
