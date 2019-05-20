@@ -682,7 +682,7 @@ var dataDateAll = [
 
 var dataRegionAll = [{
         "name": "Africa",
-        "color":"#5f4690",
+        "color":"#a65628",
         "data": [
             {"name":"Burkina Faso","value":1},
             {"name":"Burundi","value":1},
@@ -695,7 +695,7 @@ var dataRegionAll = [{
         ]
 },{
         "name": "Asia",
-        "color":"#40c0f0",
+        "color":"#377eb8",
         "data": [
             {"name":"Bangladesh","value":1},
             {"name":"Cambodia","value":1},
@@ -721,7 +721,7 @@ var dataRegionAll = [{
         ]
 },{
         "name": "Europe",
-        "color":"#edad08",
+        "color":"#4daf4a",
         "data": [
             {"name":"Austria","value":2},
             {"name":"Belgium","value":1},
@@ -746,7 +746,7 @@ var dataRegionAll = [{
         ]
 },{
         "name": "North American",
-        "color":"#fe4700",
+        "color":"#984ea3",
         "data": [
             {"name":"Canada","value":6},
             {"name":"Puerto Rico","value":1},
@@ -761,7 +761,7 @@ var dataRegionAll = [{
         ]
 },{
         "name": "South America",
-        "color":"#73af48",
+        "color":"#f781bf",
         "data": [
             {"name":"Argentina","value":13},
             {"name":"Brazil","value":47},
@@ -775,8 +775,23 @@ var dataRegionAll = [{
 }];
 
 var shortCatAll = [{
+        "name": "Best data journalism team portfolio: (Small newsroom)",
+        "color":"#ffff33",
+        "data": [
+            {"value":10,"size":"Small","color":"#fe4700","title":"The Pudding (team portfolio)","organisation":"The Pudding","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Texas Tribune Data Visuals Team Personalized News Portfolio","organisation":"The Texas Tribune","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Center for Public Integrity Data Portfolio","organisation":"Center for Public Integrity","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Bureau Local Team","organisation":"The Bureau of Investigative Journalism","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"FiveThirtyEight Portfolio","organisation":"FiveThirtyEight","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"J++ (Journalism++)","organisation":"J++ (Journalism++)","country":"Sweden"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Marshall Project data portfolio","organisation":"The Marshall Project","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Air quality in Mongolia","organisation":"Mongolian Center for Investigative Reporting","country":"Mongolia"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Postdata.club - Best team portfolio (small newsroom)","organisation":"Postdata.club","country":"Cuba"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"South Africa's Deadly School Toilets","organisation":"Media Hack Collective","country":"South Africa"},        
+        ]
+},{
         "name": "Award for innovation in data journalism",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Copy, paste, legislate: We looked for legislation that was written by special interests. We found it in all 50 states.","organisation":"USA Today","country":"United States"},
             {"value":10,"size":"Large","color":"#edad08","title":"The Economist's 'Build a voter' models","organisation":"The Economist","country":"United Kingdom"},
@@ -789,7 +804,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Award for student and young data journalist of the year",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Portfolio: Kira Schacht","organisation":"Deutsche Welle / Journocode","country":"Germany"},
             {"value":10,"size":"Small","color":"#fe4700","title":"Deputy editor for Rutas del Conflicto","organisation":"Rutas del Conflicto","country":"Colombia"},
@@ -801,7 +816,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Best data journalism team portfolio: (Large newsroom)",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Data journalism team","organisation":"The Times & The Sunday Times","country":"United Kingdom"},
             {"value":10,"size":"Large","color":"#edad08","title":"ProPublica News Applications Team","organisation":"ProPublica","country":"United States"},
@@ -819,23 +834,8 @@ var shortCatAll = [{
             {"value":10,"size":"Large","color":"#edad08","title":"Caixin Vislab","organisation":"Caixin Media","country":"China"},        
         ]
 },{
-        "name": "Best data journalism team portfolio: (Small newsroom)",
-        "color":"#40c0f0",
-        "data": [
-            {"value":10,"size":"Small","color":"#fe4700","title":"The Pudding (team portfolio)","organisation":"The Pudding","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Texas Tribune Data Visuals Team Personalized News Portfolio","organisation":"The Texas Tribune","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Center for Public Integrity Data Portfolio","organisation":"Center for Public Integrity","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Bureau Local Team","organisation":"The Bureau of Investigative Journalism","country":"United Kingdom"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"FiveThirtyEight Portfolio","organisation":"FiveThirtyEight","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"J++ (Journalism++)","organisation":"J++ (Journalism++)","country":"Sweden"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Marshall Project data portfolio","organisation":"The Marshall Project","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Air quality in Mongolia","organisation":"Mongolian Center for Investigative Reporting","country":"Mongolia"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Postdata.club - Best team portfolio (small newsroom)","organisation":"Postdata.club","country":"Cuba"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"South Africa's Deadly School Toilets","organisation":"Media Hack Collective","country":"South Africa"},        
-        ]
-},{
         "name": "Best individual portfolio",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Shane Shifflett's portfolio","organisation":"The Wall Street Journal","country":"United States"},
             {"value":10,"size":"Large","color":"#edad08","title":"Al Shaw Individual Portfolio","organisation":"ProPublica","country":"United States"},
@@ -848,7 +848,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Best use of data in a breaking news story, within first 36 hours",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Indonesia plane crash","organisation":"Reuters","country":"United States"},
             {"value":10,"size":"Large","color":"#edad08","title":"Every time Ford and Kavanaugh dodged a question, in one chart","organisation":"Vox.com","country":"United States"},
@@ -860,7 +860,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Data journalism website of the year",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"graphics.reuters.com","organisation":"Reuters","country":"United States"},
             {"value":10,"size":"Small","color":"#fe4700","title":"The Pudding","organisation":"The Pudding","country":"United States"},
@@ -871,7 +871,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Data visualisation of the year",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"To See How Levees Increase Flooding, We Built Our Own","organisation":"ProPublica","country":"United States"},
             {"value":10,"size":"Large","color":"#edad08","title":"Here's How America Uses Its Land","organisation":"Bloomberg Graphics","country":"United States"},
@@ -887,7 +887,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Investigation of the year",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"Hurricane Maria's Dead","organisation":"AP","country":"Puerto Rico"},
             {"value":10,"size":"Large","color":"#edad08","title":"Ocean Shock","organisation":"Reuters","country":"United States"},
@@ -902,20 +902,8 @@ var shortCatAll = [{
             {"value":10,"size":"Large","color":"#edad08","title":"The Force Report","organisation":"NJ Advance Media","country":"United States"},
         ]
 },{
-        "name": "News Data App",
-        "color":"#40c0f0",
-        "data": [  
-            {"value":10,"size":"Small","color":"#fe4700","title":"Observatorio de Corrupción","organisation":"Conocimiento Abierto y Asociación Civil por la Justicia","country":"Argentina"},
-            {"value":10,"size":"Large","color":"#edad08","title":"St. Louis Crime Tracker","organisation":"St. Louis Post-Dispatch","country":"United States"},
-            {"value":10,"size":"Large","color":"#edad08","title":"Broadband speed map reveals Britain's new digital divide","organisation":"Financial Times","country":"United Kingdom"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"Follow the NRA's Spending on the 2018 Midterms, Down to the Last Dollar","organisation":"The Trace","country":"United States"},
-            {"value":10,"size":"Large","color":"#edad08","title":"Bloomberg Businessweek Best B-Schools","organisation":"Bloomberg Businessweek","country":"United States"},
-            {"value":10,"size":"Large","color":"#edad08","title":"Can You Afford to Retire","organisation":"The Wall Street Journal","country":"United States"},
-            {"value":10,"size":"Small","color":"#fe4700","title":"The Myth of the Criminal Immigrant","organisation":"The Marshall Project","country":"United States"},
-        ]
-},{
         "name": "Open Data Award",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Small","color":"#fe4700","title":"The post-conflict numbers","organisation":"Consejo de Redacción - www.consejoderedaccion.org / Colombiacheck.com","country":"Colombia"},
             {"value":10,"size":"Small","color":"#fe4700","title":"Sold From Under You","organisation":"The Bureau of Investigative Journalism and HuffPost UK","country":"United Kingdom"},
@@ -926,7 +914,7 @@ var shortCatAll = [{
         ]
 },{
         "name": "Public Choice Award",
-        "color":"#40c0f0",
+        "color":"#ffff33",
         "data": [
             {"value":10,"size":"Large","color":"#edad08","title":"South Sudan Food Prices","organisation":"The Washington Post","country":"United States"},
             {"value":10,"size":"Small","color":"#fe4700","title":"The 'Clean' Political Discourse van","organisation":"Darkenu","country":"Israel"},
@@ -936,6 +924,18 @@ var shortCatAll = [{
             {"value":10,"size":"Large","color":"#edad08","title":"In certain places in Russia HIV takes more lives than car accidents, suicides and alcohol: research","organisation":"RBC.ru","country":"Russian Federation"},
             {"value":10,"size":"Large","color":"#edad08","title":"Homicide, the main cause of death of the bodies that were repatriated to El Salvador","organisation":"El Diario de Hoy","country":"El Salvador"},
             {"value":10,"size":"Large","color":"#edad08","title":"A day in a Spain without women","organisation":"El Confidencial","country":"Spain"}
+        ]
+},{
+        "name": "News Data App",
+        "color":"#ffff33",
+        "data": [  
+            {"value":10,"size":"Small","color":"#fe4700","title":"Observatorio de Corrupción","organisation":"Conocimiento Abierto y Asociación Civil por la Justicia","country":"Argentina"},
+            {"value":10,"size":"Large","color":"#edad08","title":"St. Louis Crime Tracker","organisation":"St. Louis Post-Dispatch","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Broadband speed map reveals Britain's new digital divide","organisation":"Financial Times","country":"United Kingdom"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"Follow the NRA's Spending on the 2018 Midterms, Down to the Last Dollar","organisation":"The Trace","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Bloomberg Businessweek Best B-Schools","organisation":"Bloomberg Businessweek","country":"United States"},
+            {"value":10,"size":"Large","color":"#edad08","title":"Can You Afford to Retire","organisation":"The Wall Street Journal","country":"United States"},
+            {"value":10,"size":"Small","color":"#fe4700","title":"The Myth of the Criminal Immigrant","organisation":"The Marshall Project","country":"United States"},
         ]
 }];
 
@@ -960,10 +960,10 @@ var dataCat1All = [
 ];
 
 var dataRegion2All = [
-    {"name":"North America","y":46,"color":"#fe4700"},
-    {"name":"Europe","y":28,"color":"#edad08"},
-    {"name":"Asia","y":13,"color":"#40c0f0"},
-    {"name":"South America","y":12,"color":"#73af48"},
-    {"name":"Africa","y":2,"color":"#5f4690"},
+    {"name":"North America","y":46,"color":"#984ea3"},
+    {"name":"Europe","y":28,"color":"#4daf4a"},
+    {"name":"Asia","y":13,"color":"#377eb8"},
+    {"name":"South America","y":12,"color":"#f781bf"},
+    {"name":"Africa","y":2,"color":"#a65628"},
     {"name":"Oceania","y":2,"color":"#666666"}
 ];
