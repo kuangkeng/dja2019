@@ -8,15 +8,11 @@ body {
 .dataviz-scroller {
   margin: 0 auto;
   max-width: 680px;
+  position:relative;
 }
 
 #opening-text {
   margin-top: 20%;
-}
-
-/*SCROLLSTORY CSS*/ 
-.scroller-wrapper {
-  position:relative;
 }
 
 .chart-wrapper {
