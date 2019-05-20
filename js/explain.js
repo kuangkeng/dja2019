@@ -37,15 +37,7 @@ var dataDate = [],
     dataSub = [],
     dataSub2 = [],
     dataCat2Name = [],
-    dataCat2Data = [],
-    dataBN = [],
-    dataBN2 = [],
-    dataOPP = [],
-    dataRural = [],
-    dataRural2 = [],
-    dataUrban = [],
-    dataUrban2 = [],
-    dataPassed =[];
+    dataCat2Data = [];
 
 for (i = 0; i < dataDateAll.length; i++) { 
     dataDate.push(dataDateAll[i].Day);
@@ -59,9 +51,6 @@ for (i = 0; i < dataCat1All.length; i++) {
 
 dataDate2 = JSON.parse(JSON.stringify(dataDate));
 dataSub2 = JSON.parse(JSON.stringify(dataSub));
-
-console.log("dataCat2Name = " + dataCat2Name);
-console.log("dataCat2Data = " + dataCat2Data);
 
     function init() {      
       steps = steps_null;
@@ -463,7 +452,7 @@ console.log("dataCat2Data = " + dataCat2Data);
                       startAngle: -90,
                       endAngle: 90,
                       center: ['50%', '75%'],
-                      size: '110%'
+                      size: '100%'
                   }
               },
               series: [{
@@ -658,7 +647,7 @@ console.log("dataCat2Data = " + dataCat2Data);
                         },
                     },
                     center: ['47%', '70%'],
-                    size: '90%',
+                    size: '80%',
                     startAngle: -100,
                     endAngle: 100
                   },
