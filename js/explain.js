@@ -37,6 +37,8 @@ var dataDate = [],
     dataCat2Name = [],
     dataCat2Data = [];
 
+var itemChartSize;    
+
 for (i = 0; i < dataDateAll.length; i++) { 
     dataDate.push(dataDateAll[i].Day);
     dataSub.push(dataDateAll[i].submissions);
@@ -57,6 +59,11 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
         $('.trigger').css("opacity","0.1");
       },500);
       $('.highlight').addClass("changeBackground");
+      if($('.text-wrapper').width() < 550){
+        itemChartSize = "60%"; 
+      } else {
+        itemChartSize = "100%";        
+      }
     }
 
     //SCROLLSTORY: handle the fixed/static position of grahpic
@@ -293,7 +300,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
       },
 
       function makeChart2 () {
-        $.getJSON('js/countries.json', function (dataCountryAll) {
+        $.getJSON('https://kuangkeng.github.io/dja2019/js/countries.json', function (dataCountryAll) {
           Highcharts.setOptions({
               lang: {
                 thousandsSep: ','
@@ -527,7 +534,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
       },
 
       function makeChart6 () {
-        $.getJSON('js/countries-short.json', function (dataCountryShort) {
+        $.getJSON('https://kuangkeng.github.io/dja2019/js/countries-short.json', function (dataCountryShort) {
           Highcharts.setOptions({
               lang: {
                 thousandsSep: ','
@@ -613,7 +620,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
                   pointFormat: 'No. of submissions: <b>{point.y}</b>'
               },
               legend: {
-                  enabled: false
+                  enabled: false,
               },
               credits: {enabled: false},
               series: [ 
@@ -622,6 +629,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
                     data: dataRegion2All,
                     dataLabels: {
                         enabled: true,
+                        alignTo: 'connectors',
                         formatter: function() {
                           if (this.point.name == "South America") {
                             return "South<br>America";
@@ -636,8 +644,8 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
                           fontSize: '12px',
                         },
                     },
-                    center: ['47%', '70%'],
-                    size: '80%',
+                    center: ['50%', '70%'],
+                    size: itemChartSize,
                     startAngle: -100,
                     endAngle: 100
                   },

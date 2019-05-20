@@ -1,3 +1,10 @@
+body {
+    font-family: "Fira Sans",Arial,Verdana,sans-serif;
+    color: #000;
+    font-size: 112.5%;
+    line-height: 1.5em;
+}
+
 .dataviz-wrapper {
   margin: 0 auto;
   max-width: 680px;
@@ -48,6 +55,7 @@
   margin-bottom: 500px;
   background-color: rgba(240, 240, 240, 0.8);
   text-align:left;
+  font-size: 20px;
 }
 
 .highlight {
@@ -131,3 +139,7 @@
   color:white;
   background-position:left bottom;
 }
+
+@media (max-width: 500px ) { 
+    .trigger {font-size: 16px; line-height: 20px;}
+} 
