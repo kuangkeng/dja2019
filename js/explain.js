@@ -1,13 +1,13 @@
 
 //CODE FOR SCROLLSTORY STARTS HERE
 // check viewport dimensions and use them to set the text box margin and chart height and width
-var $scrollerWrapper = $('.scroller-wrapper'),
+var $datavizScroller = $('.dataviz-scroller'),
     $chartWrapper = $('.chart-wrapper');
 
 var viewportHeight = $(window).height(),
     halfViewportHeight = Math.floor(viewportHeight / 2),
     twoThirdViewportHeight = Math.floor(viewportHeight / 3 * 2),
-    chartWidth = $scrollerWrapper.width()-22,
+    chartWidth = $datavizScroller.width()-22,
     chartMargin = 0 - (chartWidth/2), //use this to center align the chart when it's position is set as fixed
     chartHeight = Math.floor(viewportHeight*0.8),
     headlineHeight = $('.headline').outerHeight( true);
@@ -117,11 +117,11 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
 
     // calculate the position of chart from page top
         var bottom = false
-        var bb = $scrollerWrapper[0].getBoundingClientRect(),
+        var bb = $datavizScroller[0].getBoundingClientRect(),
             bottomFromTop = bb.bottom - viewportHeight,
             distance = bb.top - halfViewportHeight;
 
-        bb = $scrollerWrapper[0].getBoundingClientRect();
+        bb = $datavizScroller[0].getBoundingClientRect();
         bottomFromTop = bb.bottom - viewportHeight;
       
     //fade in and fade out the chart
@@ -137,8 +137,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
 
     //SCROLLSTORY: call the scrollStory plugin and set the features to be used. Refer to ScrollStory documentation: http://sjwilliams.github.io/scrollstory/
     function scrollstory() {
-      var $storywrapper = $('.scroller-wrapper')
-      $storywrapper.scrollStory({
+        $datavizScroller.scrollStory({
         contentSelector: '.trigger',
         triggerOffset: halfViewportHeight,
         itemfocus: handleItemFocus,
