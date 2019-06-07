@@ -19,7 +19,7 @@ $('#pageMobileMenu').css({height:viewportHeight});
 $('.mobileMenuBox').css({height:viewportHeight*0.8-headlineHeight});
 $('.mobileAvatar').css({'max-height':viewportHeight});
 
-var chart1, chart2, chart3, chart4, chart5, chart6, chart7, chart8;
+var chart1, chart2, chart3, chart4, chart5, chart6, chart7, chart8, chart9;
 
 //count and step are used to check if any chart animation step has been skipped
 var count = 0,
@@ -167,7 +167,6 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
     var steps_null = [
         [
             function step0(){ 
-              console.log("count = " + count + ", step = " + step);
             },
             function step1(){  
               callChart();
@@ -190,9 +189,12 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
             function step7(){ 
               callChart();
             },                        
-            function step7(){ 
+            function step8(){ 
               callChart();
             },
+            function step9(){ 
+              callChart();
+            },            
         ],
         //reverse animations
         [   function reverse0(){
@@ -220,6 +222,9 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
               reverseChart()  
             },      
             function reverse8(){ 
+              reverseChart()  
+            }, 
+            function reverse9(){ 
               reverseChart()  
             }, 
         ]
@@ -467,7 +472,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
               }
           }),
 
-          chart6 = new Highcharts.Chart({
+          chart5 = new Highcharts.Chart({
               chart: {
                   height: chartHeight,
                   renderTo: 'chart-container-5',
@@ -540,7 +545,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
               }
           }),
 
-          chart7 = new Highcharts.mapChart({
+          chart6 = new Highcharts.mapChart({
               chart: {
                   height: chartHeight,
                   renderTo: 'chart-container-6',
@@ -600,7 +605,7 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
               }
           }),
 
-          chart8 = new Highcharts.Chart({
+          chart7 = new Highcharts.Chart({
               chart: {
                   height: chartHeight,
                   renderTo: 'chart-container-7',
@@ -658,10 +663,60 @@ dataSub2 = JSON.parse(JSON.stringify(dataSub));
               }
           }),
 
-          chart4 = new Highcharts.Chart({
+          chart8 = new Highcharts.Chart({
               chart: {
                   height: chartHeight,
                   renderTo: 'chart-container-8',
+                  type: 'item',
+                  marginRight: 0,
+                  marginLeft: 0,
+                  animation: false,
+              },
+              title: {
+                  text: null,
+              },
+              subtitle: {
+                  enabled: false,
+              },
+              tooltip: {
+                  useHTML: true,
+                  pointFormat: 'No. of submissions: <b>{point.y}</b>'
+              },
+              legend: {
+                  enabled: false,
+              },
+              credits: {enabled: false},
+              series: [ 
+                  {
+                    name:"Regions", 
+                    data: dataSize2All,
+                    dataLabels: {
+                        useHTML: true,
+                        enabled: true,
+                        alignTo: 'connectors',
+                        style: {
+                          fontSize: '12px',
+                        },
+                    },
+                    center: ['50%', '70%'],
+                    size: itemChartSize,
+                    startAngle: -100,
+                    endAngle: 100
+                  },
+              ],
+          });
+      },      
+      function makeChart9 () {
+          Highcharts.setOptions({
+              lang: {
+                thousandsSep: ','
+              }
+          }),
+
+          chart9 = new Highcharts.Chart({
+              chart: {
+                  height: chartHeight,
+                  renderTo: 'chart-container-9',
                   type: 'packedbubble',
               },
               title: {
